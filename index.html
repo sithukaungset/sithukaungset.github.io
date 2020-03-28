@@ -11,32 +11,27 @@
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
         <a-scene embedded vr-mode-ui="enabled: false" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
+        <a-assets>
+            <a-asset-item id="bugatti-obj" src="https://raw.githubusercontent.com/sithukaungset/AR-project.io/master/knife.obj"></a-asset-item>
+    <a-asset-item id="bugatti-mtl" src="https://raw.githubusercontent.com/sithukaungset/AR-project.io/master/knife.mtl">
         
+    </a-asset-item>
+     
+        </a-assets>
 
         <a-marker type='barcode' value='7'>
-            <a-entity 
-            obj-model="obj: url(https://rishavjayswal.github.io/augmented-reality/resources/couch.obj); 
-            mtl: url(https://rishavjayswal.github.io/augmented-reality/resources/couch.mtl);"
-            scale="0.5 0.5 0.5"
-            position="0d 1.5 -2">
-        </a-entity>
-
+            <a-box position='0 0.5 0' color="yellow"></a-box>
         </a-marker>
 
         <a-marker id="animated-marker" type='barcode' value='6'>
-            
             <a-entity
-            material="src: url(https://d2z6pp1b5cghw2.cloudfront.net/3f805b32-c95d-4109-b10f-308be54f718f/bd9dc47176b72bc5c32a2c78cc53c7a1.jpg)"
-            obj-model="obj: url(https://d2z6pp1b5cghw2.cloudfront.net/3f805b32-c95d-4109-b10f-308be54f718f/model.obj);"
-            scale="0.5 0.5 0.5"
-            position="0d 1.5 -2"
-            rotation="0 90 0"
-   ></a-entity>
+                
+                obj-model="obj: #bugatti-obj ; mtl: #bugatti-mtl "
+                >
+            </a-entity>
         </a-marker>
 
         <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
-
-
